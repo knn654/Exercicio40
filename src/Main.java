@@ -11,14 +11,8 @@ public class Main {
 		semaforo = new Semaphore(totalSaques);
 		semaforo = new Semaphore(totalDepositos);
 		
-		for (int i = 0; i < totalSaques; i++) {
-			Thread saques = new Threads(i, semaforo);
-			saques.start();
-		}
-		
-		for (int i = 0; i < totalDepositos; i++) {
-			Thread depositos = new Threads(i, semaforo);
-			depositos.start();
-		}
+		int i = (int) (Math.random() * 20) + 1;
+		int j = ((int) (Math.random() * 20) + 1) - i;
+
 	}
 }
